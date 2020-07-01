@@ -1,18 +1,34 @@
-//Thanks to LeetCode
+//Thanks to LeetCode and JavaTPoint
 
 class Solution {
-
-  public int removeDuplicates(int[] nums) {
-        int length = 1;
-        //Mencari nilai length
-        for(int i=1;i<nums.length;i++){
-            //Kalau tidak sama dengan elemen di sebelahnya
-            if(nums[i]!=nums[i-1]) {
-                nums[length] = nums[i];
-                length++;
+  
+  //Delete Duplicate Elements of Array
+   public static int removeDuplicateElements(int arr[], int n){
+        if (n==0 || n==1){
+            return n;
+        }  
+        int j = 0;//for next element
+        for (int i=0; i < n-1; i++){
+            if (arr[i] != arr[i+1]){
+                arr[j++] = arr[i];
             }
         }
-        return length;
+        arr[j++] = arr[n-1];
+        return j;
+    }
+  
+      public static int removeDuplicateElements(int arr[], int n){
+        if (n==0 || n==1){
+            return n;
+        }  
+        int j = 0;//for next element
+        for (int i=0; i < n-1; i++){
+            if (arr[i] != arr[i+1]){
+                arr[j++] = arr[i];
+            }
+        }
+        arr[j++] = arr[n-1];
+        return j;
     }
     
     //1st Method using Two Pointers
