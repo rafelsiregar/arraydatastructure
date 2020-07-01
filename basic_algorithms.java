@@ -17,6 +17,23 @@ class Solution {
         return j;
     }
   
+  public static int[] removeDuplicates(int arr[]){
+        int j = 0;
+    //Menentukan ukuran elemen array
+        for (int i=0; i<arr.length-1; i++)
+            if (arr[i] != arr[i+1])
+                j++;
+         
+        int[] new_arr = new int[j+1];
+    //Mengisi elemen
+        int k = 0;
+        for (int i=0; i<arr.length-1; i++)
+            if (arr[i] != arr[i+1])
+                new_arr[k++] = arr[i];
+         new_arr[k++] = arr[arr.length-1];
+        return temp;
+    }
+  
       public static int removeDuplicateElements(int arr[], int n){
         if (n==0 || n==1){
             return n;
