@@ -3,18 +3,16 @@
 class Solution {
   
   //Delete Duplicate Elements of Array
-   public static int removeDuplicateElements(int arr[], int n){
-        if (n==0 || n==1){
-            return n;
-        }  
-        int j = 0;//for next element
-        for (int i=0; i < n-1; i++){
-            if (arr[i] != arr[i+1]){
-                arr[j++] = arr[i];
-            }
-        }
-        arr[j++] = arr[n-1];
-        return j;
+   public static int[] removeDuplicates(int arr[]){
+        Set<Integer> set = new HashSet<>();
+        for(int item : nums) 
+          set.add(item);
+        int len = set.size();
+        int[] res = new int[len];
+        int i = 0;
+        for(int item : set) 
+          res[i++] = item;
+        return res; 
     }
   
   public static int[] removeDuplicates(int arr[]){
@@ -34,17 +32,17 @@ class Solution {
         return temp;
     }
   
-      public static int removeDuplicateElements(int arr[], int n){
-        if (n==0 || n==1){
-            return n;
+      public static int removeDuplicates(int arr[]){
+        if (arr.length==0 || arr.length==1){
+            return arr.length;
         }  
         int j = 0;//for next element
-        for (int i=0; i < n-1; i++){
+        for (int i=0; i < arr.length-1; i++){
             if (arr[i] != arr[i+1]){
                 arr[j++] = arr[i];
             }
         }
-        arr[j++] = arr[n-1];
+        arr[j++] = arr[arr.length-1];
         return j;
     }
     
