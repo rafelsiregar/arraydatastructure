@@ -43,7 +43,7 @@ class Solution {
     return n;
 }
   
-    
+    //Method to check if there are any elements of which value is double of another element
     public boolean checkIfExist(int[] arr) {
         HashSet<Integer> element_list = new HashSet<>();
         for(int i=0;i<arr.length;i++){
